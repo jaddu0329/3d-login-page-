@@ -1,0 +1,81 @@
+:root {
+  --splash-accent-1: #ff7a00;
+  --splash-accent-2: #ffb300;
+}
+
+.app-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(1200px 800px at 60% 40%, rgba(255, 122, 0, 0.12), transparent 60%),
+    radial-gradient(900px 700px at 30% 70%, rgba(255, 179, 0, 0.10), transparent 55%),
+    linear-gradient(180deg, rgba(18, 19, 22, 1), rgba(26, 27, 31, 1));
+  color: var(--text-primary);
+  opacity: 1;
+  transform: translateZ(0);
+  transition: opacity 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.app-splash.is-fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app-splash__inner {
+  width: min(520px, 90vw);
+  padding: 28px 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.app-splash__mark {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 12px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--splash-accent-1) 0%, var(--splash-accent-2) 55%, #ff6a00 100%);
+  box-shadow: 0 18px 42px rgba(255, 122, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-splash__mark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: splashSheen 1.05s ease-out infinite;
+}
+
+@keyframes splashSheen {
+  0% { left: -120%; }
+  100% { left: 140%; }
+}
+
+.app-splash__title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.app-splash__subtitle {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+}
