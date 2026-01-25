@@ -418,19 +418,14 @@
   position: relative;
 }
 
-.auth-password__row {
-  position: relative;
-}
-
-.auth-password__row input {
+.auth-password input {
   padding-right: 52px;
 }
 
 .auth-password__toggle {
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 38px;
   width: 34px;
   height: 34px;
   display: grid;
