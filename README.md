@@ -97,6 +97,5 @@ Update the `handleSubmit` function in `LoginForm.jsx` to connect to your authent
 - Safari: ✅ Full support
 - Mobile: ✅ Responsive design
 
-## License
 
 Free to use for any project.
