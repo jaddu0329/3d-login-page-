@@ -2,7 +2,6 @@
 
 An attractive, modern login page built with React featuring a 3D interactive scene. The computer's eyes smoothly follow your cursor movement, creating an engaging  experience.
 
-## Features
 
 
 ✨ **3D Interactive Scene**
